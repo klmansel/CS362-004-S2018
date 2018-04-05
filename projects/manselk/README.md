@@ -1,1 +1,1 @@
-Name: Kara Mansel ONID: manselk
+"This is my assignment-1 submission!"
