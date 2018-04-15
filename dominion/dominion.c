@@ -651,7 +651,8 @@ int smithyCard(int card, int choice1, int choice2, int choice3, struct gameState
     drawCard(currentPlayer, state);
   }
   //discard card from hand
-  discardCard(handPos, currentPlayer, state, 0);
+  //bug introuduced- trashFlag changed to 1 to discardCard instead of 0-code compiles
+  discardCard(handPos, currentPlayer, state, 1);
   return 0;
 
 }
