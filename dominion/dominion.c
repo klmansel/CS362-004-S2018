@@ -772,7 +772,8 @@ int feastCard(int card, int choice1, int choice2, int choice3, struct gameState 
   //Backup hand
 
   //Update Coins for Buy
-  updateCoins(currentPlayer, state, 5);
+  //changed coin to 4 from 5 so user will not be able to buy items over 4 coins-code compiles
+  updateCoins(currentPlayer, state, 4);
   x = 1;//Condition to loop on
   while( x == 1) {//Buy one card
     if (supplyCount(choice1, state) <= 0){
