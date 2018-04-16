@@ -677,7 +677,8 @@ int adventurerCard(int card, int choice1, int choice2, int choice3, struct gameS
     drawCard(currentPlayer, state);
     //top card of hand is most recently drawn card.
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];
-    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+    //bug created: conditional changed || to && and code will never run-code compiles
+    if (cardDrawn == copper && cardDrawn == silver && cardDrawn == gold)
       drawntreasure++;
     else{
       temphand[z]=cardDrawn;
