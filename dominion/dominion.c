@@ -830,7 +830,8 @@ int salvagerCard(int card, int choice1, int choice2, int choice3, struct gameSta
     //gain coins equal to trashed card
     state->coins = state->coins + getCost( handCard(choice1, state) );
     //trash card
-    discardCard(choice1, currentPlayer, state, 1);
+    //bug-commented out discardCard so card stays in hand
+    // discardCard(choice1, currentPlayer, state, 1);
   }
     //discard card
   discardCard(handPos, currentPlayer, state, 0);
